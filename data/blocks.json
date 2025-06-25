@@ -1,0 +1,38 @@
+[
+  {
+    "id": "block-a-1",
+    "type": "blockA",
+    "label": "Process Block A",
+    "description": "A processing block for data transformation"
+  },
+  {
+    "id": "block-a-2",
+    "type": "blockA",
+    "label": "Input Block A",
+    "description": "Input handler block type A"
+  },
+  {
+    "id": "block-b-1",
+    "type": "blockB",
+    "label": "Output Block B",
+    "description": "Output processing block type B"
+  },
+  {
+    "id": "block-b-2",
+    "type": "blockB",
+    "label": "Filter Block B",
+    "description": "Data filtering block type B"
+  },
+  {
+    "id": "block-a-3",
+    "type": "blockA",
+    "label": "Analytics Block A",
+    "description": "Analytics and reporting block"
+  },
+  {
+    "id": "block-b-3",
+    "type": "blockB",
+    "label": "Storage Block B",
+    "description": "Data storage and retrieval block"
+  }
+]
