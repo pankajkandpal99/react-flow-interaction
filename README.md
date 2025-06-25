@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Flow Block Connector 🧩➡️🧩
 
-## Getting Started
+A modern, interactive flow builder built with React Flow, Next.js, and TypeScript. Create node-based diagrams with drag-and-drop blocks and intelligent connections.
 
-First, run the development server:
+## ✨ Features
 
+- **Drag-and-Drop Interface**
+  - Predefined blocks (Block A → Block B)
+  - Smooth animations and visual feedback
+
+- **Smart Connections**
+  - Only allows valid connections (Block A → Block B)
+  - Animated edges with smoothstep curves
+
+- **Node Management**
+  - Right-click context menu (Delete/Duplicate)
+  - MiniMap for navigation
+  - Responsive design
+
+- **Professional UI**
+  - Tailwind CSS styling
+  - Gradient node designs
+  - Dark/light mode ready
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 (App Router)
+- **UI Library**: React Flow v11
+- **Styling**: Tailwind CSS
+- **State Management**: React hooks
+- **Type Safety**: TypeScript
+- **Drag-and-Drop**: react-dnd
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+
+- npm/yarn/pnpm
+
+### Installation
 ```bash
+git clone https://github.com/pankajkandpal99/react-flow-interaction.git
+cd react-flow-block-connector
+npm install
+
+Development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production Build
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
