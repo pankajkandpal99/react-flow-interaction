@@ -9,7 +9,7 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
   bottom,
   onClose,
   onDelete,
-  onDuplicate
+  onDuplicate,
 }) => {
   return (
     <div
@@ -23,6 +23,9 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
       onClick={(e) => e.stopPropagation()}
     >
       <div className="flex flex-col">
+        <div className="px-3 py-2 text-sm text-center text-gray-800 font-medium border-b border-gray-100">
+          Hello World
+        </div>
         <button
           className="px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md transition-colors duration-150"
           onClick={() => {

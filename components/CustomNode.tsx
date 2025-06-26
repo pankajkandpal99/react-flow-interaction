@@ -22,13 +22,12 @@ const CustomNode: React.FC<NodeProps<CustomNodeData>> = ({
         active:cursor-grabbing
       `}
     >
-      {/* Top Handle */}
       <Handle
         type="target"
         position={Position.Top}
-        className="!w-3 !h-3 !bg-blue-500 !border-2 !border-white !rounded-full !top-[-8px] !left-[50%] !transform !-translate-x-1/2 hover:!scale-125 transition-transform"
+        className="!w-3 !h-3 !bg-green-500 !border-2 !border-white !rounded-full !top-[-8px] !left-[50%] !transform !-translate-x-1/2 hover:!scale-125 transition-transform"
         style={{
-          background: "#3b82f6",
+          background: "#10b981",
           border: "2px solid white",
           width: "16px",
           height: "16px",
@@ -36,7 +35,6 @@ const CustomNode: React.FC<NodeProps<CustomNodeData>> = ({
         }}
       />
 
-      {/* Node Content - This is the drag handle area */}
       <div className="flex flex-col items-center text-center space-y-1 drag-handle">
         <div className="text-sm font-normal">{data.label}</div>
         {data.description && (
@@ -44,13 +42,12 @@ const CustomNode: React.FC<NodeProps<CustomNodeData>> = ({
         )}
       </div>
 
-      {/* Bottom Handle */}
       <Handle
         type="source"
         position={Position.Bottom}
-        className="!w-3 !h-3 !bg-blue-500 !border-2 !border-white !rounded-full !bottom-[-8px] !left-[50%] !transform !-translate-x-1/2 hover:!scale-125 transition-transform"
+        className="!w-3 !h-3 !bg-red-500 !border-2 !border-white !rounded-full !bottom-[-8px] !left-[50%] !transform !-translate-x-1/2 hover:!scale-125 transition-transform"
         style={{
-          background: "#3b82f6",
+          background: "#ef4444",
           border: "2px solid white",
           width: "16px",
           height: "16px",

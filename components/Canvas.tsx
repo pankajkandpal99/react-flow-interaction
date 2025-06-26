@@ -46,7 +46,34 @@ const Canvas: React.FC<CanvasProps> = ({
 
   const onConnect = useCallback(
     (params: Connection | Edge) => {
-      console.log("Connecting:", params);
+      console.log("Attempting to connect:", params);
+
+      // Check if connection already exists (same direction)
+      const existingConnection = edges.find(
+        (edge) => edge.source === params.source && edge.target === params.target
+      );
+
+      if (existingConnection) {
+        console.log("Connection already exists, preventing duplicate");
+        return;
+      }
+
+      // Check if reverse connection exists (prevent bidirectional)
+      const reverseConnection = edges.find(
+        (edge) => edge.source === params.target && edge.target === params.source
+      );
+
+      if (reverseConnection) {
+        console.log(
+          "Reverse connection exists, preventing bidirectional connection"
+        );
+        alert(
+          "Connection not allowed: Reverse connection already exists between these nodes!"
+        );
+        return;
+      }
+
+      console.log("Creating new connection:", params);
       setEdges((eds) =>
         addEdge(
           {
@@ -59,7 +86,7 @@ const Canvas: React.FC<CanvasProps> = ({
         )
       );
     },
-    [setEdges]
+    [setEdges, edges]
   );
 
   const onDragOver = useCallback((event: React.DragEvent) => {
